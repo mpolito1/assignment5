@@ -2,9 +2,9 @@
   style.css - Assignment 5
 */
 body {
-	color: #121212;
-	font-family: Arial, sans-serif;
-	font-size: 20px;
+    color: #121212;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
 }
 a {
     text-decoration: none; /* to remove the underline in the links to look like picture in asignment */
@@ -26,8 +26,32 @@ a {
     text-align: center;
 }
  
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 5px; /* Spacing between items */
+}
+.nav {
+    background-color: lightblue;
+    grid-column: span 2;
+    text-align: center;
+}
+.footer {
+    background-color: lightgreen;
+    grid-column: span 2;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
  
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
     .container {
       display: grid;
       grid-template-columns: 1fr;
@@ -35,9 +59,11 @@ a {
     .nav {
         background-color: lightblue;
         text-align: center;
+        grid-column: 1;
     }
     .footer {
         background-color: lightgreen;
+        grid-column: 1;
         text-align: center;
         font-size: 15px;
         padding: 10px;
@@ -51,29 +77,3 @@ a {
     }
 }
  
-@media screen and (min-width:769px) {
-    .container {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 5px; /* Spacing between items */
-    }
-    .nav {
-        background-color: lightblue;
-        grid-column: span 2;
-        text-align: center;
-    }
-    .footer {
-        background-color: lightgreen;
-        grid-column: span 2;
-        text-align: center;
-        font-size: 15px;
-        padding: 10px;
-    }
-    .flex-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 5px;
-    }
-}
